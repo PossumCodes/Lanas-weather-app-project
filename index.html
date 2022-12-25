@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2ec7fe8477.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="city-search-form">
+        <div class="weather-search">
+          <label for="inputPassword5" class="form-label city-search"
+            >City Weather Search</label
+          >
+          <input
+            type="text"
+            id="inputPassword5"
+            class="form-control"
+            placeholder="Type city you would like to search "
+          />
+          <button type="submit" class="btn btn-primary" id="search-button">
+            Search
+          </button>
+          <button type="button" class="btn btn-success">
+            Current Location
+          </button>
+        </div>
+      </form>
+      <div class="heading">
+        <h1 id="city-heading">Sydney</h1>
+      </div>
+      <br />
+      <br />
+      <div class="row temp-container">
+        <div class="col-2 day-display" id="current-day">Sunday</div>
+        <div class="col-2 time-display" id="current-time">10.30 p.m.</div>
+        <div class="col-12 weather-display" id="current-forecast">Cloudy</div>
+      </div>
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-2 temp-display">
+          <h2>
+            <span id="temperature"></span>
+          </h2>
+        </div>
+        <h3>Five Day Forecast</h3>
+        <hr />
+        <div class="row forecast-icons">
+          <div class="col-2 day-one-icon">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <div class="col-2 day-two-icon">
+            <i class="fa-solid fa-cloud-rain"></i>
+          </div>
+          <div class="col-2 day-three-icon">
+            <i class="fa-solid fa-cloud-rain"></i>
+          </div>
+          <div class="col-2 day-four-icon">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <div class="col-2 day-five-icon">
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+        </div>
+        <div class="row forecast-days">
+          <div class="col-2 day-one">Monday</div>
+          <div class="col-2 day-two">Tuesday</div>
+          <div class="col-2 day-three">Wednesday</div>
+          <div class="col-2 day-four">Thursday</div>
+          <div class="col-2 day-five">Friday</div>
+        </div>
+        <div class="row forecast-temps">
+          <div class="col-2 day-one-temp">27°C</div>
+          <div class="col-2 day-two-temp">22°C</div>
+          <div class="col-2 day-three-temp">17°C</div>
+          <div class="col-2 day-four-temp">18°C</div>
+          <div class="col-2 day-five-temp">19°C</div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
